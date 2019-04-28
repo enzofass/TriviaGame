@@ -5,4 +5,10 @@ body  {
 .container {
   background: rgb(142, 147, 151);
   text-align: center;
+  
+}
+
+#start-trivia {
+  background: antiquewhite;
+  padding: 5px 5px;
 }

@@ -14,296 +14,34 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    
-    <div class="container"><!-- container starts here -->
+    <div class="container">
+      <!-- container starts here -->
       <!-- Main heading -->
       <h1 id="main-header">Mustache Trivia Game</h1>
+      <!-- start trivia -->
+      <div id="start-trivia">
+        <input type="button" id="start" class="btn-lg" value="Start Trivia" />
+      </div>
       <!-- Trivia Timer -->
-      <div id="main-timer"></div>
+      <div id="main-timer">
+        <!-- <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-dark sprogress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        </div> -->
+      </div>
       <!-- Trivia questions start here -->
       <div id="trivia-questions">
-        <form action="">
-          <!-- question 1 -->
-          <h3>Which US President did NOT wear a mustache?</h3>
-          <input
-            type="radio"
-            name="question-1"
-            class="multi-choice"
-            value="Chester Arthur"
-          />Chester Arthur <br />
-          <input
-            type="radio"
-            name="question-1"
-            class="multi-choice"
-            value="Grover Cleaveland"
-          />Grover Cleaveland <br />
-          <input
-            type="radio"
-            name="question-1"
-            class="multi-choice"
-            value="William McKinley"
-          />William McKinley <br />
-          <input
-            type="radio"
-            name="question-1"
-            class="multi-choice"
-            value="Theodore Roosevelt"
-          />Theodore Roosevelt <br />
-          <!-- question 2 -->
-          <h3>Why did Hitler choose the particular style mustache he wore?</h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="He was trying to cover up a cleft lip"
-          />He was trying to cover up a cleft lip <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="He was immitating a famous actor of his time."
-          />He was immitating a famous actor of his time. <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="He was drawing attention away from crooked teeth."
-          />He was drawing attention away from crooked teeth. <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="It allowed his gas mask to fit more snugly."
-          />It allowed his gas mask to fit more snugly. <br />
-          <!-- question 3 -->
-          <h3>
-            What style mustache was worn by the magician in the classic,
-            <em>Frosty the Snowman</em>?
-          </h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="handlebar"
-          />handlebar <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="fu manchu"
-          />fu manchu <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="dali"
-          />dali <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="lampshade"
-          />lampshade <br />
-          <!-- question 4 -->
-          <h3>The average man with a mo touches it how many times per day?</h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="76"
-          />76 <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="360"
-          />360 <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="760"
-          />760 <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="3600"
-          />3600 <br />
-          <!-- question 5 -->
-          <h3>
-            A mustache is capable of absorbing what percentage of its own weight
-            in water?
-          </h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="10%"
-          />10% <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="20%"
-          />20% <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="25%"
-          />25% <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="33%"
-          />33% <br />
-          <!-- question 6 -->
-          <h3>
-            Which of The Beatles grew his mustache for the pragmatic reason of
-            covering up the swollen lip he got in a moped accident?
-          </h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="John Lenon"
-          />John Lenon <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Paul McCartney"
-          />Paul McCartney <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="George Harrison"
-          />George Harrison <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Ringo Starr"
-          />Ringo Starr <br />
-          <!-- question 7 -->
-          <h3>
-            Who wrote, “To a brave man, honour is dearer than life; and to the
-            major, his whiskers were dearer than honour itself!”?
-          </h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Cassio"
-          />Cassio <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Socrates"
-          />Socrates <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Charles Dickens"
-          />Charles Dickens <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Mark Twain"
-          />Mark Twain <br />
-          <!-- question 8 -->
-          <h3>
-            Which game show host stopped sporting his iconic mustache in 2001?
-          </h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Steve Harvey"
-          />Steve Harvey <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Alex Trebek"
-          />Alex Trebek <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Pat Sajak"
-          />Pat Sajak <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Peter Marshall"
-          />Peter Marshall <br />
-          <!-- question 9 -->
-          <h3>Which mustached cartoon character works as a plumber?</h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Ned Flanders"
-          />Ned Flanders <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Yosemite Sam"
-          />Yosemite Sam <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Mario Mario"
-          />Mario Mario <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="Dick Dasstardly"
-          />Dick Dasstardly <br />
-          <!-- question 10 -->
-          <h3>
-            According to the Guinness Book of Records, the world’s longest
-            mustache was how long?
-          </h3>
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="3 ft"
-          />3 ft <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="7 ft"
-          />7 ft <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="10 ft"
-          />10 ft <br />
-          <input
-            type="radio"
-            name="question-2"
-            class="multi-choice"
-            value="14 ft"
-          />14 ft <br />
+        <form id="trivia" name="trivia">
+          <div id="trivia-div"></div>
+          <input type="button" id="finished" value="Finished" />
         </form>
       </div>
-    </div><!-- container ends here -->
-    
+      <!-- results div -->
+      <div id="results">
+        <!-- <h2>Time is Up!</h2>
+        <h3>You scored: <span id="resultDisplay" ></span></h3> -->
+      </div>
+    </div>
+    <!-- container ends here -->
 
     <!-- bootstrap links -->
     <script>
@@ -324,5 +62,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
