@@ -4,11 +4,26 @@ body  {
 
 .container {
   background: rgb(142, 147, 151);
-  text-align: center;
+  margin: 20px auto;
+  overflow: auto;
   
 }
 
-#start-trivia {
+h1,
+h3 {
+  text-align: center;
+}
+
+#start-trivia,
+#results {
   background: antiquewhite;
-  padding: 5px 5px;
+  margin: 10px auto;
+  padding: 10rem;
+}
+
+.multi-choice {
+  /* margin-top: -1px; */
+  /* vertical-align: middle; */
+  margin: 5px;
+  margin-left: 40%;
 }

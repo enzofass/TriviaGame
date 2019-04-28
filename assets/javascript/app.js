@@ -69,32 +69,40 @@ const questions = [
   }
 ]; // end of quiz array of objects
 // variables
-let timerEnd = false;
 
 // start quiz
 function startQuiz() {
-  $("#main-timer, #trivia-questions").show(1000);
-  $("#start").hide(1000);
+  $("#main-timer, #trivia-questions").show(500);
+  $("#start-trivia").hide(1000);
   // calls the render function to populate page with html quiz structure
   renderQuiz(questions);
   // calls function to start timer
-  jQuery(function ($) {
-    const tMinutes = 60 * .3,
-        display = $('#main-timer');
+  jQuery(function($) {
+    const tMinutes = 60 * 1,
+      display = $("#main-timer");
     startTimer(tMinutes, display);
-    });
+  });
 }
 
 // finish quiz
+let timerEnd = false;
 function finishQuiz() {
+  clearInterval(quizTimer);
   checkQuiz();
+  $("#results").show(1000);
   $("#main-timer, #trivia-questions").hide(5000);
+  $("#resultDisplay").append(
+    `You answered: <br> 
+    ${correct} correct and <br>
+    ${wrong} wrong`
+  );
 
-  if (timerEnd){
+  if (timerEnd) {
     // display text time is up
-    console.log("time is up");
+    $(".timer-up").show(1000);
+  } else {
+    $(".timer-up").hide(1000);
   }
-
 }
 
 // render function to populate html with quiz questions
@@ -106,25 +114,25 @@ function renderQuiz(q) {
         <input
           type="radio"
           name="question-${i + 1}"
-          class="multi-choice-${i + 1}"
+          class="multi-choice"
           value="${q[i].answers[0]}"
         />${q[i].answers[0]} <br />
         <input
           type="radio"
           name="question-${i + 1}"
-          class="multi-choice-${i + 1}"
+          class="multi-choice"
           value="${q[i].answers[1]}"
         />${q[i].answers[1]} <br />
         <input
           type="radio"
           name="question-${i + 1}"
-          class="multi-choice-${i + 1}"
+          class="multi-choice"
           value="${q[i].answers[2]}"
         />${q[i].answers[2]} <br />
         <input
           type="radio"
           name="question-${i + 1}"
-          class="multi-choice-${i + 1}"
+          class="multi-choice"
           value="${q[i].answers[3]}"
         />${q[i].answers[3]} <br />
     `;
@@ -133,31 +141,34 @@ function renderQuiz(q) {
 }
 
 // start timer function
+let quizTimer;
 function startTimer(duration, display) {
-  let timer = duration, minutes, seconds;
-  setInterval(function () {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
+  let timer = duration,
+    minutes,
+    seconds;
+  quizTimer = setInterval(function() {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      display.text(minutes + ":" + seconds);
+    display.text(minutes + ":" + seconds);
 
-      if (--timer < 0) {
-          timer = duration;
-          timerEnd = true;
-          clearInterval();
-          finishQuiz();
-      }
+    if (--timer < 0) {
+      timer = duration;
+      timerEnd = true;
+      finishQuiz();
+    }
   }, 1000);
 }
 
 // check quiz function
+let correct = 0;
+let wrong = 0;
 function checkQuiz() {
-  let correct = 0;
-  let wrong = 0;
-
+  correct = 0;
+  wrong = 0;
   for (let i = 0; i < questions.length; i++) {
     const answer = $(`input[name=question-${i + 1}]:checked`).val();
     if (answer === questions[i].correctAnswer) {
@@ -173,9 +184,4 @@ function checkQuiz() {
 $("#finished").on("click", finishQuiz);
 $("#start").on("click", startQuiz);
 
-$("#main-timer, #trivia-questions").hide();
-
-
-
-
-
+$("#main-timer, #trivia-questions, #results").hide();

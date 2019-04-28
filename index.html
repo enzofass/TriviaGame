@@ -19,8 +19,13 @@
       <!-- Main heading -->
       <h1 id="main-header">Mustache Trivia Game</h1>
       <!-- start trivia -->
-      <div id="start-trivia">
-        <input type="button" id="start" class="btn-lg" value="Start Trivia" />
+      <div id="start-trivia" class="col-6">
+        <input
+          type="button"
+          id="start"
+          class="btn-lg btn-success"
+          value="Start Trivia"
+        />
       </div>
       <!-- Trivia Timer -->
       <div id="main-timer">
@@ -31,14 +36,19 @@
       <!-- Trivia questions start here -->
       <div id="trivia-questions">
         <form id="trivia" name="trivia">
-          <div id="trivia-div"></div>
-          <input type="button" id="finished" value="Finished" />
+          <div id="trivia-div" class="col-10"></div>
+          <input
+            type="button"
+            id="finished"
+            class="btn-lg btn-light"
+            value="Finished"
+          />
         </form>
       </div>
       <!-- results div -->
-      <div id="results">
-        <!-- <h2>Time is Up!</h2>
-        <h3>You scored: <span id="resultDisplay" ></span></h3> -->
+      <div id="results" class="col-6">
+        <h2 class="timer-up">Time is Up!</h2>
+        <h3><span id="resultDisplay"></span></h3>
       </div>
     </div>
     <!-- container ends here -->
