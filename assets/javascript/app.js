@@ -72,7 +72,7 @@ const questions = [
 
 // start quiz
 function startQuiz() {
-  $("#main-timer, #trivia-questions").show(500);
+  $("#trivia-questions").show(500);
   $("#start-trivia").hide(1000);
   // calls the render function to populate page with html quiz structure
   renderQuiz(questions);
@@ -90,7 +90,7 @@ function finishQuiz() {
   clearInterval(quizTimer);
   checkQuiz();
   $("#results").show(1000);
-  $("#main-timer, #trivia-questions").hide(5000);
+  $("#trivia-questions").hide(5000);
   $("#resultDisplay").append(
     `You answered: <br> 
     ${correct} correct and <br>
@@ -184,4 +184,4 @@ function checkQuiz() {
 $("#finished").on("click", finishQuiz);
 $("#start").on("click", startQuiz);
 
-$("#main-timer, #trivia-questions, #results").hide();
+$("#trivia-questions, #results").hide();

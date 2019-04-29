@@ -10,20 +10,34 @@ body  {
 }
 
 h1,
-h3 {
+h2,
+h3,
+#main-timer {
   text-align: center;
+  margin: 20px;
 }
 
 #start-trivia,
-#results {
+#results,
+#trivia-questions {
   background: antiquewhite;
-  margin: 10px auto;
-  padding: 10rem;
+  margin: 25px auto;
+  padding: 2rem;
+  width: 70%;
+  display: block;
 }
 
 .multi-choice {
   /* margin-top: -1px; */
   /* vertical-align: middle; */
   margin: 5px;
-  margin-left: 40%;
+  /* margin-left: 45%;  */
 }
+ #finished,
+ #start {
+  margin: 25px auto;
+  width: 40%;
+  display: block;
+ }
+
+
