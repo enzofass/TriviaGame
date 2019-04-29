@@ -146,7 +146,7 @@ function startTimer(duration, display) {
   let timer = duration,
     minutes,
     seconds;
-  quizTimer = setInterval(function() {
+    quizTimer = setInterval(function() {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
