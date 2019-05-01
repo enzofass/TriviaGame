@@ -78,7 +78,7 @@ function startQuiz() {
   renderQuiz(questions);
   // calls function to start timer
   jQuery(function($) {
-    const tMinutes = 60 * 1,
+    const tMinutes = 60 * 2,
       display = $("#main-timer");
     startTimer(tMinutes, display);
   });
