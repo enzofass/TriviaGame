@@ -1,0 +1,43 @@
+body  {
+  background: url(../images/mustache-pattern-wallpaper.jpg)
+}
+
+.container {
+  background: rgb(142, 147, 151);
+  margin: 20px auto;
+  overflow: auto;
+  
+}
+
+h1,
+h2,
+h3,
+#main-timer {
+  text-align: center;
+  margin: 20px;
+}
+
+#start-trivia,
+#results,
+#trivia-questions {
+  background: antiquewhite;
+  margin: 25px auto;
+  padding: 2rem;
+  width: 70%;
+  display: block;
+}
+
+.multi-choice {
+  /* margin-top: -1px; */
+  /* vertical-align: middle; */
+  margin: 5px;
+  /* margin-left: 45%;  */
+}
+ #finished,
+ #start {
+  margin: 25px auto;
+  width: 40%;
+  display: block;
+ }
+
+
